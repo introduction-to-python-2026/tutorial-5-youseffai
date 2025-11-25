@@ -1,14 +1,16 @@
 # Q: Write an import statement that imports the function pyplot from the module matplotlib and renames it to plt.
 import matplotlib as plt
 
+
 def build_histogram(data):
-   list={}
+  lst={}
   for i in data:
-    if not i in list:
-      list[i]=1
-    else:
-      list[i]+=1
-  return list
+    for key in lst.keys():
+      if i == key:
+        lst[key] = lst[key]+ 1
+      else:
+        lst[i] = 1
+  return data
 def plot_histogram(histogram):
     x_values = list(histogram.keys())
     y_values = list(histogram.values())
