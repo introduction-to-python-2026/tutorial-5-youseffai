@@ -10,7 +10,7 @@ def build_histogram(data):
         lst[key] = lst[key]+ 1
       else:
         lst[i] = 1
-  return data
+  return lst
 def plot_histogram(histogram):
     x_values = list(histogram.keys())
     y_values = list(histogram.values())
